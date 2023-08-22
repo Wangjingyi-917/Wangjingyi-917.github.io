@@ -3,7 +3,7 @@
   "builds": [
       {
           "src": "*.py",
-          "use": "@Wangjingyi-917/"
+          "use": "@Wangjingyi-917/Wangjingyi-917.github.io"
       }
   ],
   "routes": [
