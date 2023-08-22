@@ -1,3 +1,153 @@
-<div>
-  
-</div>
+{% extends "base.html" %}
+{% block body %}
+<main>
+
+    <div style="height:10rem;"></div> 
+    <section id=home__above_fold>
+        <div id=home__visual_cinnamon_logo>
+            <img id=home__visual_cinnamon_logo_img
+                src=https://d33wubrfki0l68.cloudfront.net/4b08284756124810353ed9b94271f1409f6ec3f9/9543c/img/site/visual_cinnamon_logo_512.png
+                alt="Visual Cinnamon">
+        </div>
+        <div id=home__above_fold_visual></div>
+        <div id=home__above_fold_text_wrapper>
+            <p id=home__above_fold_top_text class=script>A place for</p>
+            <h1 id=home__above_fold_title>design<br>x<br>decision</h1>
+            <p id=home__above_fold_scroll><sub>&#8964;</sub> 下滑探索更多 <sub>&#8964;</sub></p>
+        </div>
+    </section>
+    <section id="home__shop">
+        <h2>近期成果展览</h2>
+
+        <section id=home__portfolio>
+            <div id=home__portfolio_top_bar></div>
+            <ul class=home__portfolio_list>
+
+                <li class=home__portfolio_post>
+                    <a href=./project1/ class=home__portfolio_link>
+                        <div class=home__portfolio_img_wrapper>
+                            <div class=home__portfolio_img_screen></div>
+                            <div class=home__portfolio_client_wrapper>
+                                <p class="home__portfolio_client script">
+                                    设计项目
+                                </p>
+                                <p class=home__portfolio_clientname><span>蚂蚁金服挑战赛 #01</span></p>
+                            </div>
+                            <img class=home__portfolio_img
+                                src="{{url_for('static',filename='images/projects/mayi1.png')}}"
+                                alt="Fleeting Thoughts">
+                            <div class=home__portfolio_hover_img
+                                style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class=home__portfolio_post>
+                    <a href=./project2/ class=home__portfolio_link>
+                        <div class=home__portfolio_img_wrapper>
+                            <div class=home__portfolio_img_screen></div>
+                            <div class=home__portfolio_client_wrapper>
+                                <p class="home__portfolio_client script">
+                                    设计项目
+                                </p>
+                                <p class=home__portfolio_clientname><span>蚂蚁金服挑战赛 #02</span></p>
+                            </div>
+                            <img class=home__portfolio_img
+                                src="{{url_for('static',filename='images/projects/mayi2.jpg')}}"
+                                alt="Fleeting Thoughts">
+                            <div class=home__portfolio_hover_img
+                                style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class=home__portfolio_post>
+                    <a href=./project2/ class=home__portfolio_link>
+                        <div class=home__portfolio_img_wrapper>
+                            <div class=home__portfolio_img_screen></div>
+                            <div class=home__portfolio_client_wrapper>
+                                <p class="home__portfolio_client script">
+                                    设计项目
+                                </p>
+                                <p class=home__portfolio_clientname><span>斯坦福</span></p>
+                            </div>
+                            <img class=home__portfolio_img
+                                src="{{url_for('static',filename='images/projects/mayi2.jpg')}}"
+                                alt="Fleeting Thoughts">
+                            <div class=home__portfolio_hover_img
+                                style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class=portfolio_home__post>
+                    <a href=../project1 class=portfolio_home__link>
+                        <div class=portfolio_home__img_wrapper>
+                            <div class=portfolio_home__img_screen></div>
+                            <div class=portfolio_home__client_wrapper>
+                                <p class="portfolio_home__client script">
+                                    研究成果
+                                </p>
+                                <p class=portfolio_home__clientname><span>行为决策会议 #01</span></p>
+                            </div>
+                            <img class=portfolio_home__img
+                                src="{{url_for('static',filename='images/projects/juece01.png')}}"
+                                alt="Fleeting Thoughts">
+                            <div class=portfolio_home__hover_img
+                                style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)></div>
+                        </div>
+                    </a>
+                </li>
+                <li class=portfolio_home__post>
+                    <a href=../project1 class=portfolio_home__link>
+                        <div class=portfolio_home__img_wrapper>
+                            <div class=portfolio_home__img_screen></div>
+                            <div class=portfolio_home__client_wrapper>
+                                <p class="portfolio_home__client script">
+                                    研究成果
+                                </p>
+                                <p class=portfolio_home__clientname><span>行为决策会议 #02</span></p>
+                            </div>
+                            <img class=portfolio_home__img
+                                src="{{url_for('static',filename='images/projects/juece01.png')}}"
+                                alt="Fleeting Thoughts">
+                            <div class=portfolio_home__hover_img
+                                style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)></div>
+                        </div>
+                    </a>
+                </li>
+                <li class=portfolio_home__post>
+                    <a href=../project1 class=portfolio_home__link>
+                        <div class=portfolio_home__img_wrapper>
+                            <div class=portfolio_home__img_screen></div>
+                            <div class=portfolio_home__client_wrapper>
+                                <p class="portfolio_home__client script">
+                                    研究成果
+                                </p>
+                                <p class=portfolio_home__clientname><span>行为决策会议 #03</span></p>
+                            </div>
+                            <img class=portfolio_home__img
+                                src="{{url_for('static',filename='images/projects/juece01.png')}}"
+                                alt="Fleeting Thoughts">
+                            <div class=portfolio_home__hover_img
+                                style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)></div>
+                        </div>
+                    </a>
+                </li>
+
+
+            </ul>
+        </section>
+        <div class=home__shop_link>查看更多
+            <a href=../design-projects>设计作品</a> &
+            <a href=../research-projects>研究成果</a>
+        </div>
+
+    </section>
+
+
+
+
+</main>
+
+{% endblock %}
