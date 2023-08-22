@@ -1,15 +1,1 @@
-{
-  "version": 2,
-  "builds": [
-      {
-          "src": "*.py",
-          "use": "@Wangjingyi-917/Wangjingyi-917.github.io"
-      }
-  ],
-  "routes": [
-      {
-          "src": "(.*)",
-          "dest": "app.py"
-      }
-  ]
-}
+
