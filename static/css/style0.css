@@ -1,0 +1,164 @@
+html,
+body,
+.banner,
+.container {
+    height: 100%;
+    text-align: center;
+    color: white;
+    background: black;
+}
+
+.container_header {
+    text-align: left;
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px #fff solid;
+    background: #111111;
+}
+
+#logo_img {
+    float: left;
+    height: 80px;
+}
+
+#logo_text {
+    margin-top: -2px;
+    margin-left: 5px;
+    width: 80px;
+    font-size: 20px;
+    color: #fff;
+    float: left;
+}
+
+/* 导航栏 */
+.nav {
+    width: 400px;
+    height: 80px;
+    float: right;
+    /* background: #99aaee; */
+}
+
+label.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.nav ul {
+    float: right;
+}
+
+.nav ul li {
+    position: relative;
+    display: inline-block;
+    /* line-height: 10vh; */
+}
+
+.nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#navfold ul {
+    float: none;
+    width: 120px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    display: none;
+    background-color: 444;
+}
+
+a.active,
+a:hover {
+    color: white;
+    background: #444444;
+    transition: 0.5s;
+}
+
+#check {
+    display: none;
+}
+
+#checkul li {
+    float: right;
+    line-height: 10vh;
+    display: none;
+}
+
+.checkimg {
+    width: 20px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+@media(max-width:952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .nav .navul li a {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:858px) {
+
+    /* 窗口缩小后改变布局 */
+    #checkul li {
+        display: block;
+    }
+
+    .navul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 15, 15, 0.85);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transform: all .5s;
+    }
+
+    .navul li {
+        display: block;
+    }
+
+    .navul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: #777777;
+    }
+
+    #check:checked~.navul {
+        left: 0;
+    }
+
+    #name {
+        font-size: 60px;
+    }
+}
+
+.block {
+    margin-left: 30%;
+    width: 300px;
+    height: 300px;
+    background: rgba(132, 168, 99, 0.7);
+    margin-bottom: 20px;
+    border-radius: 50%;
+}

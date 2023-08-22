@@ -1,0 +1,97 @@
+.content-text-image {
+    padding: 0;
+}
+
+.content-text-image.right .image {
+    float: left;
+    border-left: none;
+    padding-top: 25px;
+    border-right: 60px solid #FFFFFF;
+}
+
+.content-text-image .image {
+    float: right;
+    width: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-left: 60px solid #FFFFFF;
+}
+.single-cs .text .block, .single-cs.right .text .block {
+    padding: 64px 30px 35px 0px;
+    /* min-height: 500px; */
+}
+.content-text-image.right .text .block {
+    float: left;
+    padding: 0px 60px 35px 60px;
+}
+.content-text-image .text .block {
+    float: right;
+    /* max-width: 530px; */
+    padding: 0px 0 35px 30px;
+    position: relative;
+}
+.intro h1, .intro .with-bootstrap .h1, .with-bootstrap .intro .h1 {
+    margin: 0 0 30px 0;
+    text-align: left;
+    background-position: 0 100%;
+}
+.content-text h1, .content-text .with-bootstrap .h1, .with-bootstrap .content-text .h1 {
+    font-size: 42px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+    background: url(../img/line1.png) no-repeat 50% 100%;
+    font-family: "GillSansNova-SemiBold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+
+.content-two-cols {
+    float: left;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 90px;
+}
+.content-text {
+    font-family: "HelveticaLTStd-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.content-two-cols .inner .col {
+    float: left;
+    width: 50%;
+    padding: 0px 60px 0 60px;
+}
+.content-text h3, .content-text h2, .content-text .with-bootstrap .h3, .with-bootstrap .content-text .h3 {
+    font-size: 21px;
+    letter-spacing: 2px;
+    font-family: "GillSansNova-SemiBold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    text-transform: uppercase;
+    padding: 0 0 0px 0;
+}
+.content-text p {
+    font-size: 16px;
+    line-height: 1.6em;
+    padding: 0 60px 10px 0;
+    text-align: justify;
+}
+/* .row {
+    float: left;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+} */
+
+.image_details{
+    width: 80%;
+}
+
+.image_details_title{
+    height: 25px;
+    font-size: 21px;
+    letter-spacing: 2px;
+    font-family: "GillSansNova-SemiBold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    text-transform: uppercase;
+}

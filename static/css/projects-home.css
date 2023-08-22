@@ -1,0 +1,489 @@
+:root {
+    --grid-cols: 12;
+    --grid-item-span: 4 /* (12/3) - due to bug in Chrome that can't handle division in grid-column */
+}
+
+.portfolio_home__container {
+    font-size: calc(16px + .2vw);
+    max-width: 1300px;
+    min-height: 50vh;
+    padding: 2em 1em 6em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__container {
+        padding:2em 1em 3em
+    }
+}
+
+.portfolio_home__list {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols),1fr);
+    grid-gap: 1em;
+    list-style: none;
+    padding: 0
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__list {
+        grid-column-gap:0;
+        grid-row-gap: 1em
+    }
+}
+
+.portfolio_home__post {
+    grid-column-end: span var(--grid-item-span);
+    margin: 0
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__post {
+        grid-column:var(--full-grid-row)
+    }
+}
+
+.portfolio_home__link {
+    width: 100%;
+    text-decoration: none
+}
+
+.portfolio_home__img_wrapper {
+    width: 100%;
+    line-height: 0;
+    background: linear-gradient(135deg,rgba(10,120,184,.8) 0%,rgba(39,204,193,.8) 100%)
+}
+
+.portfolio_home__img_wrapper:hover .portfolio_home__hover_img {
+    opacity: 1
+}
+
+.portfolio_home__img {
+    width: 100%
+}
+
+.portfolio_home__hover_img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .5s ease
+}
+
+.portfolio_home__img_screen {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: url(../img/site/overlay.png),linear-gradient(135deg,rgba(10,120,184,.8) 0%,rgba(39,204,193,.8) 100%);
+    opacity: 0;
+    transition: all .5s ease
+}
+
+.portfolio_home__client_wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.15);
+    opacity: 0
+}
+
+.portfolio_home__img_wrapper:hover .portfolio_home__client_wrapper,.portfolio_home__img_wrapper:hover .portfolio_home__img_screen {
+    opacity: 1
+}
+
+.portfolio_home__client {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 1.5em
+}
+
+.portfolio_home__clientname {
+    font-size: 1em;
+    font-weight: 800;
+    margin: 0 0 1em;
+    line-height: 1.2em;
+    letter-spacing: .04em
+}
+
+
+.portfolio_home__clientname span {
+    border-bottom: 4px solid #fff;
+    padding: .2em .8em
+}
+
+.portfolio_home__datasketches {
+    grid-column: var(--full-grid-row);
+    grid-row-start: 4;
+    margin: 0;
+    background: linear-gradient(to left,transparent 40%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%),url(../img/portfolio/home/data_sketches_book_banner.png);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    color: #fff;
+    padding: 0 3em 1.5em;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 1.5em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__datasketches {
+        background:linear-gradient(to left,rgba(0,0,0,.5) 0%,rgba(0,0,0,.5) 100%),url(../img/portfolio/home/data_sketches_book_banner_mobile.jpg);
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        padding: 0 1em 2em;
+        min-height: 400px
+    }
+}
+
+.portfolio_home__datasketches_title_group {
+    grid-column: 1/span 6;
+    margin: 0 0 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__datasketches_title_group {
+        margin:1.4em 0 1em;
+        text-align: center
+    }
+}
+
+.portfolio_home__datasketches_title {
+    margin: 2em 0 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__datasketches_title {
+        margin:1.4em 0 1em
+    }
+}
+
+.portfolio_home__datasketches_subtitle {
+    font-size: 1em;
+    font-style: italic;
+    opacity: .8;
+    margin: 0;
+    line-height: 1.4em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__datasketches_subtitle {
+        justify-content:center;
+        margin: 0 0 1em;
+        font-size: .95em;
+        text-align: center
+    }
+}
+
+.portfolio_home__datasketches_link_group {
+    grid-column: 1/span 6;
+    align-self: end;
+    margin-bottom: 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__datasketches_link_group {
+        margin-top:2em;
+        text-align: center
+    }
+}
+
+a.portfolio_home__datasketches_link {
+    border-bottom: .1em solid #fff;
+    background: 0 0;
+    font-size: 1.1em;
+    padding: .3em .1em
+}
+
+a.portfolio_home__datasketches_link:hover,a.portfolio_home__datasketches_link:focus {
+    background: #fff;
+    color: #000
+}
+
+#portfolio_home__speaking {
+    grid-column: var(--full-grid-row);
+    grid-row-start: 8;
+    margin: 0;
+    background: linear-gradient(to left,transparent 30%,rgba(0,0,0,.9) 100%),url(../img/portfolio/home/nadieh_bremer_speaking.jpg);
+    background-position: 50% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    padding: 0 3em 1.5em
+}
+
+@media(max-width: 768px) {
+    #portfolio_home__speaking {
+        display:block;
+        padding: 0 1em 2em
+    }
+}
+
+.portfolio_home__speaking_title {
+    grid-column: 1/span 7;
+    margin: 2em 0 .7em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__speaking_title {
+        margin:1.4em 0 1em;
+        text-align: center
+    }
+}
+
+.portfolio_home__speaking_subtitle {
+    grid-column: 1/-1;
+    font-size: .9em;
+    font-style: italic;
+    opacity: .8;
+    margin: 0;
+    line-height: 1.4em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__speaking_subtitle {
+        justify-content:center;
+        margin: 0 0 1em;
+        font-size: .95em;
+        text-align: center
+    }
+}
+
+.portfolio_home__speaking_logo_group {
+    grid-column: 1/-1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__speaking_logo_group {
+        justify-content:center
+    }
+}
+
+.portfolio_home__speaking_logo {
+    margin: .5em 1.5em;
+    max-width: 60%
+}
+
+.portfolio_home__speaking_link_group {
+    grid-column: 1/-1;
+    margin-top: 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__speaking_link_group {
+        text-align:center
+    }
+}
+
+a.portfolio_home__speaking_link {
+    border-bottom: .1em solid #fff;
+    background: 0 0;
+    font-size: 1em;
+    padding: .3em .1em
+}
+
+a.portfolio_home__speaking_link:hover,a.portfolio_home__speaking_link:focus {
+    background: #fff;
+    color: #000
+}
+
+.portfolio_home__shop {
+    grid-column: var(--full-grid-row);
+    grid-row-start: 12;
+    margin: 0;
+    background: linear-gradient(to left,transparent 40%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.85) 100%),url(../img/portfolio/home/shop_banner.png);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 450px;
+    color: #fff;
+    padding: 0 3em 1.5em;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 1.5em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__shop {
+        background:linear-gradient(to left,rgba(0,0,0,.4) 0%,rgba(0,0,0,.4) 100%),url(../img/portfolio/home/shop_banner_mobile.jpg);
+        background-position: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        padding: 0 1em 2em;
+        min-height: 400px
+    }
+}
+
+.portfolio_home__shop_title_group {
+    grid-column: 1/span 5;
+    margin: 0 0 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__shop_title_group {
+        margin:1.4em 0 1em;
+        text-align: center
+    }
+}
+
+.portfolio_home__shop_title {
+    margin: 2em 0 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__shop_title {
+        margin:1.4em 0 1em
+    }
+}
+
+.portfolio_home__shop_subtitle {
+    font-size: 1em;
+    font-style: italic;
+    opacity: .8;
+    margin: 0;
+    line-height: 1.4em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__shop_subtitle {
+        justify-content:center;
+        margin: 0 0 1em;
+        font-size: .95em;
+        text-align: center
+    }
+}
+
+.portfolio_home__shop_link_group {
+    grid-column: 1/span 5;
+    align-self: end;
+    margin-bottom: 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__shop_link_group {
+        margin-top:2em;
+        text-align: center
+    }
+}
+
+a.portfolio_home__shop_link {
+    border-bottom: .1em solid #fff;
+    background: 0 0;
+    font-size: 1.1em;
+    padding: .3em .1em
+}
+
+a.portfolio_home__shop_link:hover,a.portfolio_home__shop_link:focus {
+    background: #fff;
+    color: #000
+}
+
+.portfolio_home__skillshare {
+    grid-column: var(--full-grid-row);
+    grid-row-start: 16;
+    margin: 0;
+    background: linear-gradient(to left,transparent 49%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.9) 100%),url(../img/portfolio/home/nadieh_bremer_skillshare.png);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 550px;
+    color: #fff;
+    padding: 0 3em 1.5em;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 1.5em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__skillshare {
+        display:block;
+        padding: 0 1em 2em;
+        min-height: 400px
+    }
+}
+
+.portfolio_home__skillshare_title_group {
+    grid-column: 1/span 6;
+    margin: 0 0 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__skillshare_title_group {
+        margin:1.4em 0 1em;
+        text-align: center
+    }
+}
+
+.portfolio_home__skillshare_title {
+    margin: 2em 0 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__skillshare_title {
+        margin:1.4em 0 1em
+    }
+}
+
+.portfolio_home__skillshare_subtitle {
+    font-size: 1em;
+    font-style: italic;
+    opacity: .8;
+    margin: 0;
+    line-height: 1.4em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__skillshare_subtitle {
+        justify-content:center;
+        margin: 0 0 1em;
+        font-size: .95em;
+        text-align: center
+    }
+}
+
+.portfolio_home__skillshare_link_group {
+    grid-column: 1/span 6;
+    align-self: end;
+    margin-bottom: 1em
+}
+
+@media(max-width: 768px) {
+    .portfolio_home__skillshare_link_group {
+        margin-top:5em;
+        text-align: center
+    }
+}
+
+a.portfolio_home__skillshare_link {
+    border-bottom: .1em solid #fff;
+    background: 0 0;
+    font-size: 1.1em;
+    padding: .3em .1em
+}
+
+a.portfolio_home__skillshare_link:hover,a.portfolio_home__skillshare_link:focus {
+    background: #fff;
+    color: #000
+}

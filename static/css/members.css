@@ -1,0 +1,118 @@
+.content-text-image {
+    padding: 0;
+}
+
+.content-text-image.insight-page {
+    margin-bottom: 5px;
+}
+
+.content-text-image .image {
+    float: right;
+    width: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-left: 60px solid #FFFFFF;
+}
+
+.content-text-image .image img {
+    display: none;
+    float: left;
+    max-width: 100%;
+    padding: 0 30px 0 0;
+    margin: 0 0 60px 0;
+}
+
+.content-text-image .text {
+    float: left;
+    padding-top: 25px;
+    width: 50%;
+}
+
+.content-text-image .text ul li {
+    text-transform: uppercase;
+}
+
+.content-text-image .text .block {
+    float: right;
+    /* max-width: 530px; */
+    padding: 0px 0 55px 30px;
+    position: relative;
+}
+
+.content-text-image .text .more a {
+    color: #575656;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #FFFFFF;
+    padding: 0 0 5px 0;
+    font-family: "GillSansNova-SemiBold", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    position: relative;
+    text-decoration: none;
+}
+
+.content-text-image .text .more a::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #0094a9;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+/* .content-text-image .text .more a:hover::after,
+.content-text-image .text .more a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.content-text-image.right .image {
+    float: left;
+    border-left: none;
+    border-right: 60px solid #FFFFFF;
+}*/
+
+.content-text-image.right .image img {
+    float: right;
+    padding: 0 0 0 30px;
+}
+
+/*.content-text-image.right .text {
+    float: right;
+}
+
+.content-text-image.right .text .block {
+    float: left;
+    padding: 0px 30px 55px 0px;
+}
+
+.content-text-image.blue .image {
+    border-color: #0099A3;
+} */
+
+@media only screen and (max-width: 660px) {
+    .content-text-image.blue {
+        padding-top: 40px !important;
+    }
+}
+
+.row {
+    float: left;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.grade_title{
+    text-align: center;
+    
+}
