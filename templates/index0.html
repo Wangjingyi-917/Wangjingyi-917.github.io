@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+{% block body %}
+<!-- <canvas id="bg"></canvas> -->
+
+<main>
+    <nav class="fixed">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <ul id="checkul">
+                <li>
+                    <img src="{{url_for('static',filename='images/nav.png')}}" class="checkimg">
+                </li>
+            </ul>
+
+        </label>
+        <label class="logo">dxd</label>
+        <ul class="navul">
+            <li><a href="#" class="active">主页</a></li>
+            <li><a href="#aboutus">关于DxD</a></li>
+            <li id='navfold'><a href="#projects">项目</a>
+                <ul>
+                    <li><a href=''>设计项目</a></li>
+                    <li><a href=''>研究项目</a></li>
+                </ul>
+            </li>
+            <li><a href="#sparks">碎片</a></li>
+            <li><a href="#contect">联系</a></li>
+        </ul>
+    </nav>
+
+
+    <header>
+        <h1 id="name">design<br>X<br>decision</h1>
+        <p>🚀 Welcome to our website!</p>
+    </header>
+
+
+
+    <blockquote>
+        <p>We Are Exploring!</p>
+    </blockquote>
+
+
+
+    <section class="left" id='aboutus'>
+        <h2>👪 About us</h2>
+        <h3>Tutor</h3>
+        <div style="overflow: auto; text-align: center;">
+            <div class="memberintro wang" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/qizhang.png')}}" alt=""
+                        width="200px">
+                    <p>孙祺章<br><a href="Qizhang.Sun@bit.edu.cn">📮Qizhang.Sun@bit.edu.cn</a></p>
+                </div>
+                <div id="light" class="white_content">
+                    <h3>孙祺章</h3>
+                    <p>预聘副教授/特聘研究员
+                        北京理工大学设计与艺术学院设计思维教育研究中心副主任
+                        北京理工大学设计与艺术学院设计认知与计算研究中心副主任
+                    </p>
+                    <p>Qizhang Sun<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                    <a
+                        href="https://qizhangkevinsun.pythonanywhere.com">更多请见个人网站：https://qizhangkevinsun.pythonanywhere.com/</a>
+                </div>
+                <div id="fade" class="black_overlay"
+                    onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h3>Members</h3>
+        <div style="height:360px; overflow: auto; text-align: center; background-color: #fff;">
+
+            <div class="memberintro wang" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('jingyi_light').style.display='block';document.getElementById('jingyi_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/jingyi.png')}}" alt=""
+                        width="200px">
+                    <p>王婧怡<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="jingyi_light" class="white_content">
+                    <h3>王婧怡</h3>
+                    <p>王婧怡是本项目组成员之一，这里应该写她的自我介绍，但是这个人很懒，还没有完成
+                    </p>
+                    <p>Jingyi Wang <br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="jingyi_fade" class="black_overlay"
+                    onclick="document.getElementById('jingyi_light').style.display='none';document.getElementById('jingyi_fade').style.display='none'">
+                </div>
+            </div>
+
+            <div class="memberintro guigui" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('guigui_light').style.display='block';document.getElementById('guigui_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/guigui.png')}}" alt=""
+                        width="200px">
+                    <p>桂昱欣<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="guigui_light" class="white_content">
+                    <h3>桂昱欣</h3>
+                    <p>桂桂🙋‍，2021级专硕研究生，活泼开朗，爱好广泛（可爱的东东都喜欢:)），组会和团建爱好者，气氛组成员[烟花]。目标就业岗位为用户研究，毕设研究方向为读写障碍儿童多感官字形练习辅助产品设计。
+                    </p>
+                    <p>Yuxin Gui <br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="guigui_fade" class="black_overlay"
+                    onclick="document.getElementById('guigui_light').style.display='none';document.getElementById('guigui_fade').style.display='none'">
+                </div>
+            </div>
+
+            <div class="memberintro jiale" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('jiale_light').style.display='block';document.getElementById('jiale_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/jiale.png')}}" alt=""
+                        width="200px">
+                    <p>史佳乐<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="jiale_light" class="white_content">
+                    <h3>史佳乐</h3>
+                    <p>本科毕业于太原理工大学工业设计专业，参加过全国工业设计大赛、NCDA全国高校数字艺术设计大赛等比赛并取得了不错的成绩。研究生期间侧重研究用户认知决策与设计学等的交叉。平时喜欢读书、看电影、打羽毛球等，我觉得设计是来源于生活的，认真生活才能做出好设计!
+                    </p>
+                    <p>Jale Shi<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="jiale_fade" class="black_overlay"
+                    onclick="document.getElementById('jiale_light').style.display='none';document.getElementById('jiale_fade').style.display='none'">
+                </div>
+            </div>
+
+            <div class="memberintro jianfang" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('jianfang_light').style.display='block';document.getElementById('jianfang_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/jianfang.png')}}" alt=""
+                        width="200px">
+                    <p>管建芳<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="jianfang_light" class="white_content">
+                    <h3>管建芳</h3>
+                    <p>一名来自北京理工大学的研究生，妥妥的设计狗一枚。目前的状态是，正在努力提升设计思维，强化软件技能，也在积极参加各项比赛，希望能够成为一名优秀的设计师。性格上，既有双鱼座的敏感脆弱，又有守卫者人格的安静且有力量。生活中，喜欢哪吒的桀骜不驯，喜欢kpop的激进活跃。因为热爱生活，所以也在积极探索各种未知项。
+                    </p>
+                    <p>Jianfang Shi<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="jianfang_fade" class="black_overlay"
+                    onclick="document.getElementById('jianfang_light').style.display='none';document.getElementById('jianfang_fade').style.display='none'">
+                </div>
+            </div>
+
+            <div class="memberintro tiantian" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('tiantian_light').style.display='block';document.getElementById('tiantian_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/tiantian.png')}}" alt=""
+                        width="200px">
+                    <p>赵甜甜<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="tiantian_light" class="white_content">
+                    <h3>赵甜甜</h3>
+                    <p>北理工22级设计学研究生在读，本科来自于天津大学，来自黑龙江省，是一个没有东北口音的东北人，平时大部分时候比较社恐，但是跟熟人在一起话会非常多，大部分时候喜欢自己听歌看书看电影，其余时候就是和好朋友们一起玩啦，希望拥有充实且快乐的三年～
+                    </p>
+                    <p>Jianfang Shi<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="tiantian_fade" class="black_overlay"
+                    onclick="document.getElementById('tiantian_light').style.display='none';document.getElementById('tiantian_fade').style.display='none'">
+                </div>
+            </div>
+
+            <div class="memberintro tangli" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('tangli_light').style.display='block';document.getElementById('tangli_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/tangli.png')}}" alt=""
+                        width="200px">
+                    <p>唐丽<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="tangli_light" class="white_content">
+                    <h3>唐丽</h3>
+                    <p>哈喽！我叫唐丽，来自湖南株洲，是一个准研究生~我们这遍地是塑普，所以我在家讲塑普，在校讲标普。我喜欢毫无目的地涂涂画画，还有在夜深人静的时候思考一些不着边际的事情，苦中作乐是我的长项，有时候我会沙雕到朋友都怀疑我的精神状况。
+                    </p>
+                    <p>Li Tang<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="tangli_fade" class="black_overlay"
+                    onclick="document.getElementById('tangli_light').style.display='none';document.getElementById('tangli_fade').style.display='none'">
+                </div>
+            </div>
+
+            <div class="memberintro wenxin" style="float:left;">
+                <div style='cursor: pointer'
+                    onclick="document.getElementById('wenxin_light').style.display='block';document.getElementById('wenxin_fade').style.display='block'">
+                    <img class="memberimg" src="{{url_for('static',filename='images/members-pic/wenxin.png')}}" alt=""
+                        width="200px">
+                    <p>沈雯昕<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="wenxin_light" class="white_content">
+                    <h3>沈雯昕</h3>
+                    <p>INFJ一枚，来自江苏南京，本科专业是工业设计。
+                        爱好阅读、手工和音乐，喜欢小熊达菲，喜欢与迪士尼有关的一切！
+                        热爱本专业，也乐于主动接触不同领域的新知识，心愿是能为世界做出更有用的设计。
+                        OMellet是一款面向6-14岁留守儿童及其父母的零花钱管理亲子App，采用亲子双端远程互联和AI智能托管的服务模式，实现在父母远程参与下提升儿童金钱支配和理财能力的目标。此App可辅助留守儿童进行移动支付、规范其消费行为，并为其父母提供了科学的零花钱发放计划、可视化的儿童消费数据分析及一种新型的稳健投资方式。
+
+                    </p>
+                    <p>Wenxin Shen<br><a href="mailto:17664003367@163.com">📮17664003367@163.com</a></p>
+                </div>
+                <div id="wenxin_fade" class="black_overlay"
+                    onclick="document.getElementById('wenxin_light').style.display='none';document.getElementById('wenxin_fade').style.display='none'">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h3>Who Are We</h3>
+        <p>DXD研究组，全称<font color='yellow'>决策设计研究课题组（Design X Decision）</font>
+            ，由北京理工大学设计与艺术学院导师及研究生组成。学生成员来自北京理工大学设计与艺术学院在读研究生，每学年均计划接受若干硕士及博士研究生，团队成员全部来自设计学门类，具体学科背景则包括艺术设计、工业设计、机械类等。
+            跨学科项目以及决策相关研究是课题组的特征所在，团队同时期开展多个设计项目，实验与项目内容涉及<font color='yellow'>用户决策、隐私心理认知、特殊群体关怀、数字穿戴</font>
+            等多个领域与前沿技术，旨在不仅仅解决传统设计学科中的相关问题，更致力于应用心理决策等交叉学科的知识体系，开展并产出设计4.0时代下未来设计的新研究课题与成果。
+            研究组的平台将呈现我们的设计作品，课题项目及出版物，我们期望能够传播课题组的优秀项目成果与科研经验，为设计研究领域输出我们自己的一份力量。</p>
+
+    </section>
+
+    <section class="left" id='projects'>
+        <h2>
+            <a href="{{url_for('projects')}}">👩🏽‍🚀 Projects</a>
+        </h2>
+        <a href="{{url_for('project1')}}" style="float:left; margin-right:30px; text-align: center;">
+            <img src="{{url_for('static',filename='images/projects/mayi1.png')}}" width="200px" class="pj1">
+            <h6>留守儿童零花钱管理亲子APP</h6>
+            <h6>蚂蚁金服挑战赛获奖项目#1</h6>
+            <p style="font-size: 10px;">项目成员：王婧怡、黄奥博、周妍、<br>张思琪、李昆忆、阳雨辰</p>
+        </a>
+        <a href="{{url_for('project2')}}" style="float:left; text-align: center;">
+            <img src="{{url_for('static',filename='images/projects/mayi2.jpg')}}" width="200px" class="pj2">
+            <h6>留守儿童零花钱管理亲子APP</h6>
+            <h6>蚂蚁金服挑战赛获奖项目#2</h6>
+            <p style="font-size: 10px;">项目成员：王婧怡、黄奥博、周妍</p>
+        </a>
+    </section>
+
+
+    <section class="left" id='sparks'>
+        <h2>🌮 Outside of Science</h2>
+
+        <h3>Pets</h3>
+        <p>
+            <img src="{{url_for('static',filename='images/pet-pic/pet1.png')}}" class="pet">
+            <img src="{{url_for('static',filename='images/pet-pic/pet2.png')}}" class="pet">
+        </p>
+        <h3>photography</h3>
+        <p>
+            
+        </p>
+
+    </section>
+
+
+
+
+
+    <blockquote>
+        <p>Wellcome to join us!</p>
+    </blockquote>
+
+    <footer id='contect'>
+        <p>&copy; Created by <a href="" target="_blank">相信相爱一家人！</a></p>
+        <p>dxdresearchgroup@hotmail.com</p>
+    </footer>
+
+</main>
+
+<!-- three.js的背景 -->
+<!-- <script type="module" src="{{url_for('static',filename='js/main09.js')}}"></script> -->
+
+
+<script type="module" src="{{url_for('static',filename='js/featherlight.js')}}"></script>
+<script type="module" src="{{url_for('static',filename='js/featherlight.gallery.js')}}"></script>
+<script type="module" src="{{url_for('static',filename='js/jquery.detect_swipe.mim.js')}}"></script>
+<script type="module" src="{{url_for('static',filename='js/jquery.fullPage.js')}}"></script>
+
+{% endblock %}

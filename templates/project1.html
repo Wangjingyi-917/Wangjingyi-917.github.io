@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block body %}
+<main>
+    <div class="row content-text" style="height:10rem;"></div>
+    <section class="row content-text content-text-image right single-cs ">
+        <img class="image match" src="{{url_for('static',filename='images/projects/mayi1.png')}}" alt="OMellet" />
+        <div class="text match intro">
+
+            <div class="block">
+                <h1>OMellet</h1>
+                <h2>留守儿童零花钱管理亲子APP | 2022.09<br></h2>
+                <p><span class="larger">团队成员：王婧怡，黄奥博，周妍，张思琪，李昆忆，阳雨辰</span></p>
+                <h2>荣誉</h2>
+                <p>北京理工大学 x 蚂蚁金服挑战赛一等奖</p>
+                <h2>设计背景</h2>
+                <p>留守儿童在成长和教育的关键期缺少了父母的陪伴和教育，导致他们出现种种不健康的消费行为，留守儿童的犯罪率占到青少年犯罪率的20%以上。这些问题积累下来，将会是中国社会未来发展绕不过去的一个门槛，为国家治理，社会管理带来很大的挑战。
+                </p>
+            </div><!-- end block -->
+        </div><!-- end text -->
+    </section><!-- end content-text-image -->
+
+    <section class="row content-text content-two-cols ">
+        <div class="inner">
+            <div class="col match">
+                <h3>设计方案</h3>
+                <p>我们的设计从留守儿童的金钱教育出发，通过分析双方的行为特征，针对留守儿童存在不健康的消费习惯和对金钱来源有错误认知的痛点，以及家长无暇顾及孩子消费健康和缺少对孩子消费行为管理的痛点，提出了创新性解决方案。
+                </p>
+            </div><!-- end col -->
+
+            <div class="col impact match">
+                <h3>设计结果</h3>
+                <p>OMellet零花钱管理亲子app面向6-14岁留守儿童及其父母，通过亲子双方设备互联的方式，为儿童提供金钱发放和储蓄奖励服务，为家长提供存储托管及消费行为监控服务。通过双方的数据传输，实现在家长远程的参与下提升儿童金钱支配和管理能力的目标，帮助家长轻松的对孩子进行金钱管理和教育。
+                </p>
+            </div><!-- end col -->
+
+        </div><!-- end inner -->
+    </section><!-- end content-text -->
+
+    <div class="row content-text" style="height:4rem;"></div>
+    <section class="row content-text" style="text-align: center;">
+        <div>
+            <h3 class="image_details_title">发现问题——留守儿童零花钱管理现状</h3>
+            <img class="image_details" src="{{url_for('static',filename='images/projects/mayi1_story_before.jpg')}}">
+            <h3 class="image_details_title">解决问题——产品使用场景</h3>
+            <img class="image_details" src="{{url_for('static',filename='images/projects/mayi1_story_after.jpg')}}">
+       
+        </div>
+    </section>
+
+</main>
+
+
+
+{% endblock %}

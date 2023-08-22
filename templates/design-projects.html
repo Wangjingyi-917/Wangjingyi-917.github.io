@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div style="height:10rem;"></div> 
+<div class="container portfolio_home__container">
+    <ul class=portfolio_home__list>
+        <li class=portfolio_home__post>
+            <a href=../project1 class=portfolio_home__link>
+                <div class=portfolio_home__img_wrapper>
+                    <div class=portfolio_home__img_screen></div>
+                    <div class=portfolio_home__client_wrapper>
+                        <p class="portfolio_home__client script">
+                            设计项目
+                        </p>
+                        <p class=portfolio_home__clientname><span>蚂蚁金服挑战赛 #01</span></p>
+                    </div>
+                    <img class=portfolio_home__img
+                        src="{{url_for('static',filename='images/projects/mayi1.png')}}"
+                        alt="Fleeting Thoughts">
+                    <div class=portfolio_home__hover_img
+                        style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)></div>
+                </div>
+            </a>
+        </li>
+        <li class=portfolio_home__post>
+            <a href=../project2 class=portfolio_home__link>
+                <div class=portfolio_home__img_wrapper>
+                    <div class=portfolio_home__img_screen></div>
+                    <div class=portfolio_home__client_wrapper>
+                        <p class="portfolio_home__client script">
+                            设计项目
+                        </p>
+                        <p class=portfolio_home__clientname><span>蚂蚁金服挑战赛 #02</span></p>
+                    </div>
+                    <img class=portfolio_home__img
+                        src="{{url_for('static',filename='images/projects/mayi2.jpg')}}"
+                        alt="Fleeting Thoughts">
+                    <div class=portfolio_home__hover_img
+                        style=background-image:url(/img/art/2023/fleeting-thoughts/fleeting_thoughts_hover.png)></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class=to-the-top style=display:block>
+    <button id=to-top-button title="Go to top"><svg id="top-top-arrow" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="20" viewBox="0 0 53 20"
+            enable-background="new 0 0 53 20">
+            <polygon points="43.886,16.221 42.697,17.687 26.5,4.731 10.303,17.688 9.114,16.221 26.5,2.312" />
+        </svg>
+    </button>
+</div>
+{% endblock %}
