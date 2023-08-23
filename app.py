@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import flask
 from flask import Flask, render_template
+from flask_static import FlaskStatic
 #from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__) # create app
