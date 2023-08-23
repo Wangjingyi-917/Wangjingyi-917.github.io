@@ -6,13 +6,14 @@ from flask import Flask, render_template
 app = Flask(__name__) # create app
 app.config.from_object('config.DevelopmentConfig') # define server
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+static = FlaskStatic(app)
 #db = SQLAlchemy(app) # connect database
 
 #from models import *
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template("index.html")
+    return app.send_static_file("index.html")
 
 @app.route('/design-projects/', methods=['GET'])
 def de_projects():
